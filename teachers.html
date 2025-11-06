@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giáo viên - Trường Mầm non Tuổi Ngọc</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animations-effects.css" />
   </head>
   <body>
     <!-- Header Navigation -->
@@ -12,10 +14,10 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <span class="logo-icon">🏫</span>
+            <div class="logo-icon">🏫</div>
             <div class="logo-text">
               <h1>Trường Mầm non Tuổi Ngọc</h1>
-              <p>Xã Quảng Phú, Đắk Lắk</p>
+              <p>Xã Quảng Phú - Đắk Lắk</p>
             </div>
           </div>
           <nav class="navbar">
@@ -26,6 +28,11 @@
             <a href="news.html">Tin tức</a>
             <a href="contact.html">Liên hệ</a>
           </nav>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -34,117 +41,129 @@
     <section class="page-title">
       <div class="container">
         <h1>Đội ngũ giáo viên</h1>
+        <p>Những người thầy, cô tận tâm và giàu kinh nghiệm</p>
       </div>
     </section>
 
     <!-- Main Content -->
     <main>
       <div class="container">
+        <!-- Teachers Overview -->
         <section class="content-section">
           <h2>Giới thiệu đội ngũ</h2>
           <p>
-            Trường Mầm non Tuổi Ngọc tự hào có đội ngũ 8 giáo viên, cán bộ quản
-            lý tận tâm, có trình độ chuyên môn cao và giàu kinh nghiệm trong
-            giáo dục mầm non.
+            Trường Mầm non Tuổi Ngọc tự hao có đội ngũ giáo viên, cán bộ quản lý
+            tận tâm, có trình độ chuyên môn cao và giàu kinh nghiệm trong giáo
+            dục mầm non.
+          </p>
+          <p>
+            Tất cả giáo viên đều được đào tạo chuyên sâu về phương pháp giáo dục
+            mầm non hiện đại, thường xuyên tham gia các khóa học nâng cao để cập
+            nhật kiến thức và kỹ năng mới nhất.
           </p>
         </section>
 
         <!-- Teachers Grid -->
-        <section class="teachers-grid">
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Trần Thị Mỹ Hương</h3>
-            <p class="position">Hiệu trưởng, Giáo viên Lớp Hoa</p>
-            <p class="experience">Kinh nghiệm: 12 năm</p>
-            <p class="qualification">Cao đẳng Sư phạm Mầm non</p>
-          </div>
+        <section class="content-section">
+          <h2>Đội ngũ giáo viên</h2>
+          <div class="teachers-grid" id="teachers-grid">
+            <!-- Teachers will be loaded here by JavaScript -->
+            <div class="teacher-card">
+              <div class="teacher-avatar">👩‍🏫</div>
+              <h3>Cô Trần Thị Mỹ Hường</h3>
+              <div class="position">Hiệu trưởng, Giáo viên Lớp Hoa</div>
+              <div class="experience">Kinh nghiệm: 12 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Phạm Thị Lan Anh</h3>
-            <p class="position">Hiệu phó, Giáo viên Lớp Chồi</p>
-            <p class="experience">Kinh nghiệm: 10 năm</p>
-            <p class="qualification">Cao đẳng Sư phạm Mầm non</p>
-          </div>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👨‍💼</div>
+              <h3>Cô Phạm Thị Lan Anh</h3>
+              <div class="position">Hiệu phó, Giáo viên Lớp Chồi</div>
+              <div class="experience">Kinh nghiệm: 10 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Võ Thị Hoàng Yến</h3>
-            <p class="position">Giáo viên Lớp Hoa</p>
-            <p class="experience">Kinh nghiệm: 8 năm</p>
-            <p class="qualification">Cao đẳng Sư phạm Mầm non</p>
-          </div>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👩‍🏫</div>
+              <h3>Cô Võ Thị Hoàng Yến</h3>
+              <div class="position">Giáo viên Lớp Hoa</div>
+              <div class="experience">Kinh nghiệm: 8 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Đinh Thị Thoa</h3>
-            <p class="position">Giáo viên Lớp Chồi</p>
-            <p class="experience">Kinh nghiệm: 7 năm</p>
-            <p class="qualification">Cao đẳng Sư phạm Mầm non</p>
-          </div>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👩‍🏫</div>
+              <h3>Cô Đinh Thị Thoa</h3>
+              <div class="position">Giáo viên Lớp Chồi</div>
+              <div class="experience">Kinh nghiệm: 7 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Lê Thị Hằng</h3>
-            <p class="position">Giáo viên Lớp Mầm</p>
-            <p class="experience">Kinh nghiệm: 6 năm</p>
-            <p class="qualification">Cao đẳng Sư phạm Mầm non</p>
-          </div>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👩‍🏫</div>
+              <h3>Cô Lê Thị Hằng</h3>
+              <div class="position">Giáo viên Lớp Mầm</div>
+              <div class="experience">Kinh nghiệm: 6 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Ngô Thị Soa</h3>
-            <p class="position">Giáo viên Lớp Mầm</p>
-            <p class="experience">Kinh nghiệm: 5 năm</p>
-            <p class="qualification">Cao đẳng Sư phạm Mầm non</p>
-          </div>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👩‍🏫</div>
+              <h3>Cô Ngô Thị Soa</h3>
+              <div class="position">Giáo viên Lớp Mầm</div>
+              <div class="experience">Kinh nghiệm: 5 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👩‍🏫</div>
-            <h3>Cô Dương Thị Hải Yến</h3>
-            <p class="position">Cán bộ Dinh dưỡng</p>
-            <p class="experience">Kinh nghiệm: 7 năm</p>
-            <p class="qualification">Chứng chỉ Dinh dưỡng, ATTP</p>
-          </div>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👩‍🏫</div>
+              <h3>Cô Bùi Thị Linh</h3>
+              <div class="position">Giáo viên Lớp Lá</div>
+              <div class="experience">Kinh nghiệm: 4 năm</div>
+              <div class="qualification">Cao đẳng Sư phạm Mầm non</div>
+            </div>
 
-          <div class="teacher-card">
-            <div class="teacher-avatar">👨‍💼</div>
-            <h3>Anh Võ Anh Tuấn</h3>
-            <p class="position">Cán bộ Quản lý, Vệ sinh</p>
-            <p class="experience">Kinh nghiệm: 5 năm</p>
-            <p class="qualification">Chứng chỉ Vệ sinh môi trường</p>
+            <div class="teacher-card">
+              <div class="teacher-avatar">👨‍🏫</div>
+              <h3>Thầy Nguyễn Văn Đức</h3>
+              <div class="position">Giáo viên Thể dục</div>
+              <div class="experience">Kinh nghiệm: 6 năm</div>
+              <div class="qualification">Cao đẳng Thể dục Thể thao</div>
+            </div>
           </div>
         </section>
 
+        <!-- HR Policies -->
         <section class="content-section">
           <h2>Chính sách nhân sự</h2>
           <div class="hr-policies">
             <div class="policy-item">
               <h3>Tuyển dụng</h3>
               <p>
-                Trường tuyển dụng giáo viên dựa trên tiêu chuẩn chất lượng cao,
-                có bằng cấp phù hợp và kinh nghiệm trong giáo dục mầm non.
+                Tuyển dụng giáo viên có bằng cấp chuyên môn, yêu thương trẻ em
+                và có đam mê với nghề giáo dục mầm non.
               </p>
             </div>
             <div class="policy-item">
-              <h3>Đào tạo và phát triển</h3>
+              <h3>Đào tạo</h3>
               <p>
-                Thường xuyên tổ chức các khóa đào tạo nâng cao năng lực chuyên
-                môn, kỹ năng mềm, cập nhật các phương pháp giáo dục hiện đại.
+                Thường xuyên tổ chức các khóa đào tạo nâng cao để giáo viên cập
+                nhật phương pháp giáo dục hiện đại.
               </p>
             </div>
             <div class="policy-item">
-              <h3>Đánh giá hiệu suất</h3>
+              <h3>Phúc lợi</h3>
               <p>
-                Đánh giá định kỳ nhằm khuyến khích phát triển chuyên môn và nâng
-                cao chất lượng công việc.
+                Chế độ lương thưởng cạnh tranh, bảo hiểm đầy đủ và môi trường
+                làm việc thân thiện, chuyên nghiệp.
               </p>
             </div>
             <div class="policy-item">
-              <h3>Chăm sóc nhân viên</h3>
+              <h3>Phát triển</h3>
               <p>
-                Cung cấp môi trường làm việc an toàn, thân thiện và hỗ trợ phát
-                triển sự nghiệp lâu dài.
+                Tạo cơ hội thăng tiến và phát triển nghề nghiệp cho những giáo
+                viên có năng lực và tâm huyết.
               </p>
             </div>
           </div>
@@ -158,15 +177,21 @@
         <div class="footer-content">
           <div class="footer-section">
             <h4>Thông tin liên hệ</h4>
-            <p>Địa chỉ: Xã Quảng Phú, Tỉnh Đắk Lắk</p>
-            <p>Điện thoại: (0262) 123-4567</p>
-            <p>Email: tuoinoc@gmail.com</p>
+            <p>📍 Xã Quảng Phú, Huyện Cư M'gar, Tỉnh Đắk Lắk</p>
+            <p>📞 Điện thoại: (0262) 123-456</p>
+            <p>✉️ Email: truongmamnon@quangphu.edu.vn</p>
           </div>
           <div class="footer-section">
             <h4>Giờ hoạt động</h4>
-            <p>Thứ Hai - Thứ Sáu: 6:30 - 17:30</p>
-            <p>Thứ Bảy: 6:30 - 12:00</p>
+            <p>Thứ 2 - Thứ 6: 7:00 - 17:00</p>
+            <p>Thứ 7: 7:00 - 11:00</p>
             <p>Chủ Nhật: Nghỉ</p>
+          </div>
+          <div class="footer-section">
+            <h4>Liên kết nhanh</h4>
+            <p><a href="about.html">Giới thiệu</a></p>
+            <p><a href="programs.html">Chương trình</a></p>
+            <p><a href="contact.html">Liên hệ</a></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -174,5 +199,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

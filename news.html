@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tin tức - Trường Mầm non Tuổi Ngọc</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animations-effects.css" />
   </head>
   <body>
     <!-- Header Navigation -->
@@ -12,10 +14,10 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <span class="logo-icon">🏫</span>
+            <div class="logo-icon">🏫</div>
             <div class="logo-text">
               <h1>Trường Mầm non Tuổi Ngọc</h1>
-              <p>Xã Quảng Phú, Đắk Lắk</p>
+              <p>Xã Quảng Phú - Đắk Lắk</p>
             </div>
           </div>
           <nav class="navbar">
@@ -26,6 +28,11 @@
             <a href="news.html" class="active">Tin tức</a>
             <a href="contact.html">Liên hệ</a>
           </nav>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -34,152 +41,200 @@
     <section class="page-title">
       <div class="container">
         <h1>Tin tức và sự kiện</h1>
+        <p>Cập nhật thông tin mới nhất về hoạt động và sự kiện của trường</p>
       </div>
     </section>
 
     <!-- Main Content -->
     <main>
       <div class="container">
-        <section class="news-list">
-          <article class="news-article">
-            <div class="article-header">
-              <h2>Năm học mới 2024-2025 khai giảng thành công</h2>
-              <p class="article-date">📅 01/09/2024</p>
+        <!-- News Grid -->
+        <section class="content-section">
+          <h2>Tin tức mới nhất</h2>
+          <div class="news-grid" id="news-grid">
+            <!-- News will be loaded here by JavaScript -->
+            <div class="news-item">
+              <div class="news-content">
+                <div class="news-date">15/11/2024</div>
+                <h3>Khai giảng năm học mới 2024-2025</h3>
+                <p>
+                  Trường Mầm non Tuổi Ngọc long trọng tổ chức lễ khai giảng năm
+                  học mới với sự tham gia của phụ huynh và các em học sinh...
+                </p>
+              </div>
             </div>
-            <div class="article-content">
-              <p>
-                Ngày 01/09/2024, Trường Mầm non Tuổi Ngọc tổ chức lễ khai giảng
-                năm học mới 2024-2025 với sự tham dự của Ban Giám hiệu, toàn thể
-                giáo viên, phụ huynh và các em học sinh.
-              </p>
-              <p>
-                Tại buổi lễ, Hiệu trưởng Trần Thị Mỹ Hương đã phát biểu về kế
-                hoạch phát triển chương trình giáo dục, cam kết sẽ tiếp tục nâng
-                cao chất lượng giáo dục mầm non, tạo môi trường an toàn, lành
-                mạnh cho các em phát triển toàn diện.
-              </p>
-              <p>
-                Các phụ huynh cũng tỏ ra rất hài lòng với những nâng cấp cơ sở
-                vật chất và sự tận tâm của đội ngũ giáo viên trường.
-              </p>
-            </div>
-          </article>
 
-          <article class="news-article">
-            <div class="article-header">
-              <h2>Ngày hội gia đình - Trò chơi dân gian</h2>
-              <p class="article-date">📅 15/10/2024</p>
+            <div class="news-item">
+              <div class="news-content">
+                <div class="news-date">10/11/2024</div>
+                <h3>Hoạt động ngoại khóa tháng 11</h3>
+                <p>
+                  Các hoạt động vui chơi, giải trí và học tập ngoài giờ được tổ
+                  chức nhằm phát triển toàn diện cho trẻ em...
+                </p>
+              </div>
             </div>
-            <div class="article-content">
-              <p>
-                Ngày 15/10/2024, Trường Mầm non Tuổi Ngọc tổ chức ngày hội gia
-                đình với chủ đề "Trò chơi dân gian truyền thống". Đây là hoạt
-                động nhằm giúp các em bé tìm hiểu về văn hóa dân gian Việt Nam.
-              </p>
-              <p>
-                Tại ngày hội, các em đã được tham gia vào các trò chơi như nhảy
-                dây, chơi thẻ, chơi cưỡi ngựa gỗ, v.v. Các phụ huynh cũng tham
-                gia cùng con em họ, tạo ra không khí vui vẻ, ấm áp.
-              </p>
-              <p>
-                Hoạt động này không chỉ giúp trẻ phát triển thể lực mà còn gắn
-                kết tình cảm giữa gia đình và nhà trường.
-              </p>
-            </div>
-          </article>
 
-          <article class="news-article">
-            <div class="article-header">
-              <h2>Chương trình khám sức khỏe định kỳ cho học sinh</h2>
-              <p class="article-date">📅 05/10/2024</p>
+            <div class="news-item">
+              <div class="news-content">
+                <div class="news-date">05/11/2024</div>
+                <h3>Chương trình dinh dưỡng mùa đông</h3>
+                <p>
+                  Trường áp dụng thực đơn dinh dưỡng mùa đông đặc biệt nhằm tăng
+                  cường sức khỏe cho các em trong mùa lạnh...
+                </p>
+              </div>
             </div>
-            <div class="article-content">
-              <p>
-                Nhằm bảo vệ sức khỏe của các em học sinh, Trường Mầm non Tuổi
-                Ngọc phối hợp với Trạm Y tế xã Quảng Phú tổ chức khám sức khỏe
-                định kỳ cho tất cả học sinh.
-              </p>
-              <p>
-                Chương trình bao gồm: kiểm tra chiều cao, cân nặng, thị lực,
-                theo dõi phát triển tổng quát, cung cấp những lời khuyên về dinh
-                dưỡng và chăm sóc sức khỏe cho gia đình.
-              </p>
-              <p>
-                Tất cả học sinh đều được khám toàn diện và có kết quả bình
-                thường. Phụ huynh rất phấn khởi về những chương trình chăm sóc
-                sức khỏe cho con em.
-              </p>
-            </div>
-          </article>
 
-          <article class="news-article">
-            <div class="article-header">
-              <h2>Hoạt động tôn vinh Nhà giáo Việt Nam ngày 20/11</h2>
-              <p class="article-date">📅 20/11/2024</p>
+            <div class="news-item">
+              <div class="news-content">
+                <div class="news-date">01/11/2024</div>
+                <h3>Thi đua học sinh giỏi</h3>
+                <p>
+                  Kết quả cuộc thi học sinh giỏi cấp trường năm học 2024-2025
+                  với nhiều thành tích đáng khích lệ...
+                </p>
+              </div>
             </div>
-            <div class="article-content">
-              <p>
-                Nhân dịp kỷ niệm Ngày Nhà giáo Việt Nam (20/11), Trường Mầm non
-                Tuổi Ngọc tổ chức chương trình tôn vinh và cảm ơn các giáo viên.
-              </p>
-              <p>
-                Các em học sinh cùng với phụ huynh đã chuẩn bị những bài tặng
-                trộm lẻ, lời chúc tốt đẹp nhất gửi tới các thầy cô. Đây là cơ
-                hội để bé tập học cách tôn trọng, yêu thương những người giáo
-                dục mình.
-              </p>
-              <p>
-                Hoạt động này giúp xây dựng mối quan hệ tốt đẹp giữa nhà trường,
-                giáo viên và phụ huynh, tạo nên một cộng đồng giáo dục đoàn kết.
-              </p>
-            </div>
-          </article>
 
-          <article class="news-article">
-            <div class="article-header">
-              <h2>Lớp Mầm tham quan Trạm Y tế - Hiểu biết về sức khỏe</h2>
-              <p class="article-date">📅 25/09/2024</p>
+            <div class="news-item">
+              <div class="news-content">
+                <div class="news-date">28/10/2024</div>
+                <h3>Ngày hội thể thao</h3>
+                <p>
+                  Ngày hội thể thao trẻ em lần thứ 5 được tổ chức với nhiều hoạt
+                  động vận động bổ ích và thú vị...
+                </p>
+              </div>
             </div>
-            <div class="article-content">
-              <p>
-                Để giúp các em bé lớp Mầm làm quen và mất sợ hãi khi đến bệnh
-                viện, trường đã tổ chức chuyến tham quan Trạm Y tế xã Quảng Phú.
-              </p>
-              <p>
-                Các em được nhân viên y tế giới thiệu về các dụng cụ khám bệnh,
-                học cách rửa tay sạch sẽ, chải răng đúng cách. Đây là bài học
-                giáo dục sức khỏe có ý nghĩa, giúp trẻ phát triển ý thức chăm
-                sóc bản thân.
-              </p>
-              <p>
-                Sau chuyến tham quan, các em bé rất phấn khởi và không còn sợ
-                hãi khi phải khám bệnh.
-              </p>
-            </div>
-          </article>
 
-          <article class="news-article">
-            <div class="article-header">
-              <h2>Lớp Hoa chuẩn bị sẵn sàng cho tiểu học</h2>
-              <p class="article-date">📅 10/09/2024</p>
+            <div class="news-item">
+              <div class="news-content">
+                <div class="news-date">25/10/2024</div>
+                <h3>Lễ kỷ niệm ngày Nhà giáo Việt Nam</h3>
+                <p>
+                  Chương trình tri ân các thầy cô giáo nhân dịp 20/11 với nhiều
+                  hoạt động ý nghĩa...
+                </p>
+              </div>
             </div>
-            <div class="article-content">
-              <p>
-                Với năm học mới, Lớp Hoa được chuẩn bị chương trình giáo dục bậc
-                cao hơn nhằm giúp các em sẵn sàng cho bước vào tiểu học.
-              </p>
-              <p>
-                Nội dung chương trình bao gồm: nâng cao kỹ năng đọc, viết, tính
-                toán, phát triển tư duy logic, rèn kỷ luật và trách nhiệm cá
-                nhân.
-              </p>
-              <p>
-                Giáo viên sử dụng các phương pháp giáo dục hiện đại, kết hợp học
-                tập với trò chơi, tạo ra một môi trường học tập vui vẻ và hiệu
-                quả.
-              </p>
+          </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="content-section">
+          <h2>Sự kiện sắp tới</h2>
+          <div class="events-list">
+            <div class="event-item">
+              <div class="event-date">
+                <div class="day">20</div>
+                <div class="month">Tháng 11</div>
+              </div>
+              <div class="event-content">
+                <h4>Ngày Nhà giáo Việt Nam</h4>
+                <p>
+                  Lễ kỷ niệm và tri ân các thầy cô giáo trong ngày truyền thống
+                  của ngành giáo dục.
+                </p>
+              </div>
             </div>
-          </article>
+
+            <div class="event-item">
+              <div class="event-date">
+                <div class="day">25</div>
+                <div class="month">Tháng 11</div>
+              </div>
+              <div class="event-content">
+                <h4>Họp phụ huynh giữa kỳ</h4>
+                <p>
+                  Cuộc họp định kỳ với phụ huynh để trao đổi về tình hình học
+                  tập của các em.
+                </p>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-date">
+                <div class="day">01</div>
+                <div class="month">Tháng 12</div>
+              </div>
+              <div class="event-content">
+                <h4>Festival mùa đông</h4>
+                <p>
+                  Lễ hội mùa đông với các hoạt động văn nghệ, trò chơi và ẩm
+                  thực truyền thống.
+                </p>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <div class="event-date">
+                <div class="day">15</div>
+                <div class="month">Tháng 12</div>
+              </div>
+              <div class="event-content">
+                <h4>Ngày hội sách thiếu nhi</h4>
+                <p>
+                  Triển lãm sách và các hoạt động khuyến khích việc đọc sách cho
+                  trẻ em.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Announcements -->
+        <section class="content-section">
+          <h2>Thông báo quan trọng</h2>
+          <div class="announcements">
+            <div class="announcement-item important">
+              <div class="announcement-icon">📢</div>
+              <div class="announcement-content">
+                <h4>Thông báo nghỉ Tết Nguyên đán 2025</h4>
+                <p>
+                  Trường sẽ nghỉ Tết Nguyên đán từ ngày 25/01/2025 đến hết ngày
+                  05/02/2025. Khai giảng trở lại ngày 06/02/2025.
+                </p>
+                <span class="date">Ngày đăng: 15/11/2024</span>
+              </div>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-icon">💰</div>
+              <div class="announcement-content">
+                <h4>Thông báo thu học phí tháng 12</h4>
+                <p>
+                  Kính đề nghị phụ huynh nộp học phí tháng 12/2024 trước ngày
+                  05/12/2024 tại văn phòng trường.
+                </p>
+                <span class="date">Ngày đăng: 10/11/2024</span>
+              </div>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-icon">🏥</div>
+              <div class="announcement-content">
+                <h4>Chương trình khám sức khỏe định kỳ</h4>
+                <p>
+                  Các em sẽ được khám sức khỏe định kỳ vào ngày 22/11/2024. Phụ
+                  huynh vui lòng chuẩn bị sổ sức khỏe.
+                </p>
+                <span class="date">Ngày đăng: 08/11/2024</span>
+              </div>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-icon">🚌</div>
+              <div class="announcement-content">
+                <h4>Dịch vụ đưa đón mùa mưa</h4>
+                <p>
+                  Trong mùa mưa, trường sẽ điều chỉnh lịch đưa đón để đảm bảo an
+                  toàn. Chi tiết liên hệ văn phòng.
+                </p>
+                <span class="date">Ngày đăng: 05/11/2024</span>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -190,15 +245,21 @@
         <div class="footer-content">
           <div class="footer-section">
             <h4>Thông tin liên hệ</h4>
-            <p>Địa chỉ: Xã Quảng Phú, Tỉnh Đắk Lắk</p>
-            <p>Điện thoại: (0262) 123-4567</p>
-            <p>Email: tuoinoc@gmail.com</p>
+            <p>📍 Xã Quảng Phú, Huyện Cư M'gar, Tỉnh Đắk Lắk</p>
+            <p>📞 Điện thoại: (0262) 123-456</p>
+            <p>✉️ Email: truongmamnon@quangphu.edu.vn</p>
           </div>
           <div class="footer-section">
             <h4>Giờ hoạt động</h4>
-            <p>Thứ Hai - Thứ Sáu: 6:30 - 17:30</p>
-            <p>Thứ Bảy: 6:30 - 12:00</p>
+            <p>Thứ 2 - Thứ 6: 7:00 - 17:00</p>
+            <p>Thứ 7: 7:00 - 11:00</p>
             <p>Chủ Nhật: Nghỉ</p>
+          </div>
+          <div class="footer-section">
+            <h4>Liên kết nhanh</h4>
+            <p><a href="about.html">Giới thiệu</a></p>
+            <p><a href="programs.html">Chương trình</a></p>
+            <p><a href="contact.html">Liên hệ</a></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -206,5 +267,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trường Mầm non Tuổi Ngọc - Trang chủ</title>
+    <title>Trường Mầm non Tuổi Ngọc - Xã Quảng Phú, Đắk Lắk</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animations-effects.css" />
   </head>
   <body>
     <!-- Header Navigation -->
@@ -12,10 +14,10 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <span class="logo-icon">🏫</span>
+            <div class="logo-icon">🏫</div>
             <div class="logo-text">
               <h1>Trường Mầm non Tuổi Ngọc</h1>
-              <p>Xã Quảng Phú, Đắk Lắk</p>
+              <p>Xã Quảng Phú - Đắk Lắk</p>
             </div>
           </div>
           <nav class="navbar">
@@ -26,99 +28,165 @@
             <a href="news.html">Tin tức</a>
             <a href="contact.html">Liên hệ</a>
           </nav>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- Banner -->
-    <section class="banner">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
       <div class="container">
-        <h2>Chào mừng đến với Trường Mầm non Tuổi Ngọc</h2>
-        <p>Nơi nuôi dạy những hạt giống tương lai</p>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Chào mừng đến với Trường Mầm non Tuổi Ngọc</h1>
+            <p>
+              Môi trường giáo dục an toàn, lành mạnh và phát triển toàn diện cho
+              trẻ em tại xã Quảng Phú, tỉnh Đắk Lắk
+            </p>
+            <div class="hero-buttons">
+              <a href="about.html" class="btn btn-primary">Tìm hiểu thêm</a>
+              <a href="contact.html" class="btn btn-outline">Liên hệ ngay</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-placeholder">
+              <span>🌟</span>
+              <p>Hình ảnh trường học</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Main Content -->
-    <main>
+    <!-- Quick Stats -->
+    <section class="quick-stats">
       <div class="container">
-        <!-- Giới thiệu tóm tắt -->
-        <section class="intro-section">
-          <h2>Về trường chúng tôi</h2>
-          <div class="intro-content">
-            <div class="intro-text">
-              <p>
-                Trường Mầm non Tuổi Ngọc là một cơ sở giáo dục mầm non nằm tại
-                Xã Quảng Phú, Tỉnh Đắk Lắk. Chúng tôi cam kết cung cấp môi
-                trường giáo dục an toàn, lành mạnh và phát triển toàn diện cho
-                trẻ em.
-              </p>
-              <p>
-                Với đội ngũ giáo viên có trình độ đạo tạo, chúng tôi áp dụng các
-                phương pháp giáo dục hiện đại, kết hợp với truyền thống dân tộc.
-              </p>
-            </div>
-            <div class="intro-stats">
-              <div class="stat-box">
-                <h3>50+</h3>
-                <p>Học sinh</p>
-              </div>
-              <div class="stat-box">
-                <h3>8</h3>
-                <p>Giáo viên</p>
-              </div>
-              <div class="stat-box">
-                <h3>10+</h3>
-                <p>Năm kinh nghiệm</p>
-              </div>
-            </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">👨‍🎓</div>
+            <div class="stat-number" data-target="120">0</div>
+            <div class="stat-label">Học sinh</div>
           </div>
-        </section>
-
-        <!-- Các hoạt động nổi bật -->
-        <section class="programs-preview">
-          <h2>Các hoạt động chính</h2>
-          <div class="programs-grid">
-            <div class="program-card">
-              <h3>Mẫu giáo 3-4 tuổi</h3>
-              <p>
-                Phát triển kỹ năng cơ bản, hình thành thói quen tốt cho trẻ nhỏ
-              </p>
-            </div>
-            <div class="program-card">
-              <h3>Mẫu giáo 4-5 tuổi</h3>
-              <p>Nâng cao kỹ năng nhận thức, phát triển ngôn ngữ và sáng tạo</p>
-            </div>
-            <div class="program-card">
-              <h3>Lớp mầm 5-6 tuổi</h3>
-              <p>Chuẩn bị sẵn sàng cho tiểu học với kiến thức cơ bản</p>
-            </div>
+          <div class="stat-item">
+            <div class="stat-icon">👩‍🏫</div>
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Giáo viên</div>
           </div>
-        </section>
-
-        <!-- Tin tức mới -->
-        <section class="news-preview">
-          <h2>Tin tức mới nhất</h2>
-          <div class="news-grid">
-            <article class="news-item">
-              <h3>Năm học mới 2024-2025 khai giảng thành công</h3>
-              <p class="date">Ngày 01/09/2024</p>
-              <p>
-                Trường Mầm non Tuổi Ngọc khai giảng năm học mới với sự tham dự
-                của phụ huynh và chính quyền địa phương...
-              </p>
-            </article>
-            <article class="news-item">
-              <h3>Ngày hội gia đình - Trò chơi dân gian</h3>
-              <p class="date">Ngày 15/10/2024</p>
-              <p>
-                Trường tổ chức ngày hội gia đình với các trò chơi dân gian
-                truyền thống, giúp bé hiểu thêm về văn hóa...
-              </p>
-            </article>
+          <div class="stat-item">
+            <div class="stat-icon">🏛️</div>
+            <div class="stat-number" data-target="6">0</div>
+            <div class="stat-label">Lớp học</div>
           </div>
-        </section>
+          <div class="stat-item">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-number" data-target="10">0</div>
+            <div class="stat-label">Năm hoạt động</div>
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview">
+      <div class="container">
+        <div class="section-header">
+          <h2>Về trường chúng tôi</h2>
+          <p>
+            Trường Mầm non Tuổi Ngọc cam kết mang đến môi trường giáo dục tốt
+            nhất
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Trường Mầm non Tuổi Ngọc là một cơ sở giáo dục mầm non năm tại xã
+              Quảng Phú, tỉnh Đắk Lắk. Chúng tôi cam kết cung cấp môi trường
+              giáo dục an toàn, lành mạnh và phát triển toàn diện cho trẻ em.
+            </p>
+            <p>
+              Với đội ngũ giáo viên có trình độ chuyên môn cao và giàu kinh
+              nghiệm trong giáo dục mầm non, chúng tôi áp dụng các phương pháp
+              giáo dục hiện đại, kết hợp với truyền thống dân tộc.
+            </p>
+            <a href="about.html" class="btn btn-primary">Xem thêm</a>
+          </div>
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon">🎨</div>
+              <h4>Giáo dục sáng tạo</h4>
+              <p>Phát triển tư duy sáng tạo và khả năng tự học</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🤝</div>
+              <h4>Môi trường thân thiện</h4>
+              <p>Không gian học tập ấm cúng và an toàn</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🎯</div>
+              <h4>Phát triển toàn diện</h4>
+              <p>Chăm sóc và phát triển cả thể chất lẫn tinh thần</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Preview -->
+    <section class="programs-preview">
+      <div class="container">
+        <div class="section-header">
+          <h2>Chương trình giáo dục</h2>
+          <p>Các chương trình học phù hợp với từng độ tuổi</p>
+        </div>
+        <div class="programs-grid">
+          <div class="program-card">
+            <div class="program-icon">🎪</div>
+            <h3>Lớp Mầm (3-4 tuổi)</h3>
+            <ul>
+              <li>Giáo dục nhận cách, hình thành thói quen tốt</li>
+              <li>Phát triển kỹ năng vận động cơ bản</li>
+              <li>Kích thích sự tò mò và khám phá thế giới</li>
+              <li>Bước đầu học ngôn ngữ</li>
+            </ul>
+          </div>
+          <div class="program-card">
+            <div class="program-icon">🎨</div>
+            <h3>Lớp Chồi (4-5 tuổi)</h3>
+            <ul>
+              <li>Phát triển kỹ năng nhận thức, tư duy logic</li>
+              <li>Nâng cao năng lực ngôn ngữ và giao tiếp</li>
+              <li>Phát triển sáng tạo và tính độc lập</li>
+              <li>Giáo dục kỹ năng sống cơ bản</li>
+            </ul>
+          </div>
+        </div>
+        <div class="programs-cta">
+          <a href="programs.html" class="btn btn-primary"
+            >Xem tất cả chương trình</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tin tức mới nhất</h2>
+          <p>Cập nhật thông tin và hoạt động của trường</p>
+        </div>
+        <div class="news-grid" id="latest-news-grid">
+          <!-- News will be loaded here by JavaScript -->
+        </div>
+        <div class="news-cta">
+          <a href="news.html" class="btn btn-outline">Xem tất cả tin tức</a>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -126,15 +194,21 @@
         <div class="footer-content">
           <div class="footer-section">
             <h4>Thông tin liên hệ</h4>
-            <p>Địa chỉ: Xã Quảng Phú, Tỉnh Đắk Lắk</p>
-            <p>Điện thoại: (0262) 123-4567</p>
-            <p>Email: tuoinoc@gmail.com</p>
+            <p>📍 Xã Quảng Phú, Huyện Cư M'gar, Tỉnh Đắk Lắk</p>
+            <p>📞 Điện thoại: (0262) 123-456</p>
+            <p>✉️ Email: truongmamnon@quangphu.edu.vn</p>
           </div>
           <div class="footer-section">
             <h4>Giờ hoạt động</h4>
-            <p>Thứ Hai - Thứ Sáu: 6:30 - 17:30</p>
-            <p>Thứ Bảy: 6:30 - 12:00</p>
+            <p>Thứ 2 - Thứ 6: 7:00 - 17:00</p>
+            <p>Thứ 7: 7:00 - 11:00</p>
             <p>Chủ Nhật: Nghỉ</p>
+          </div>
+          <div class="footer-section">
+            <h4>Liên kết nhanh</h4>
+            <p><a href="about.html">Giới thiệu</a></p>
+            <p><a href="programs.html">Chương trình</a></p>
+            <p><a href="contact.html">Liên hệ</a></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -142,5 +216,10 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/mockData.js"></script>
+    <script src="assets/js/dataRenderer.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

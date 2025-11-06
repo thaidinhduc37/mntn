@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liên hệ - Trường Mầm non Tuổi Ngọc</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animations-effects.css" />
   </head>
   <body>
     <!-- Header Navigation -->
@@ -12,10 +14,10 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <span class="logo-icon">🏫</span>
+            <div class="logo-icon">🏫</div>
             <div class="logo-text">
               <h1>Trường Mầm non Tuổi Ngọc</h1>
-              <p>Xã Quảng Phú, Đắk Lắk</p>
+              <p>Xã Quảng Phú - Đắk Lắk</p>
             </div>
           </div>
           <nav class="navbar">
@@ -26,6 +28,11 @@
             <a href="news.html">Tin tức</a>
             <a href="contact.html" class="active">Liên hệ</a>
           </nav>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -34,58 +41,94 @@
     <section class="page-title">
       <div class="container">
         <h1>Liên hệ với chúng tôi</h1>
+        <p>
+          Hãy liên hệ để được tư vấn về chương trình giáo dục và thủ tục nhập
+          học
+        </p>
       </div>
     </section>
 
     <!-- Main Content -->
     <main>
       <div class="container">
-        <section class="contact-section">
+        <!-- Contact Info -->
+        <section class="content-section">
           <h2>Thông tin liên hệ</h2>
-          <div class="contact-info">
+          <div class="contact-info-grid">
             <div class="contact-item">
-              <h3>📍 Địa chỉ</h3>
-              <p>Xã Quảng Phú, Tỉnh Đắk Lắk</p>
+              <div class="contact-icon">📍</div>
+              <h4>Địa chỉ</h4>
+              <p>Xã Quảng Phú, Huyện Cư M'gar<br />Tỉnh Đắk Lắk, Việt Nam</p>
             </div>
             <div class="contact-item">
-              <h3>📞 Điện thoại</h3>
-              <p>(0262) 123-4567</p>
+              <div class="contact-icon">📞</div>
+              <h4>Điện thoại</h4>
+              <p>Văn phòng: (0262) 123-456<br />Di động: 0901 234 567</p>
             </div>
             <div class="contact-item">
-              <h3>📧 Email</h3>
-              <p>tuoinoc@gmail.com</p>
+              <div class="contact-icon">✉️</div>
+              <h4>Email</h4>
+              <p>truongmamnon@quangphu.edu.vn<br />tuyensinh@quangphu.edu.vn</p>
             </div>
             <div class="contact-item">
-              <h3>⏰ Giờ làm việc</h3>
-              <p>Thứ Hai - Thứ Sáu: 6:30 - 17:30</p>
-              <p>Thứ Bảy: 6:30 - 12:00</p>
-              <p>Chủ Nhật: Đóng cửa</p>
+              <div class="contact-icon">🕒</div>
+              <h4>Giờ làm việc</h4>
+              <p>Thứ 2 - Thứ 6: 7:00 - 17:00<br />Thứ 7: 7:00 - 11:00</p>
             </div>
           </div>
         </section>
 
-        <section class="contact-section">
-          <h2>Mẫu liên hệ</h2>
-          <form class="contact-form">
-            <div class="form-group">
-              <label for="name">Họ và tên *</label>
-              <input type="text" id="name" name="name" required />
+        <!-- Contact Form -->
+        <section class="content-section">
+          <h2>Gửi tin nhắn cho chúng tôi</h2>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="parent-name">Họ tên phụ huynh *</label>
+                <input
+                  type="text"
+                  id="parent-name"
+                  name="parent-name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Số điện thoại *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="phone">Điện thoại</label>
-                <input type="tel" id="phone" name="phone" />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
               </div>
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required />
+                <label for="child-age">Độ tuổi con *</label>
+                <select id="child-age" name="child-age" required>
+                  <option value="">Chọn độ tuổi</option>
+                  <option value="3-4">3-4 tuổi (Lớp Mầm)</option>
+                  <option value="4-5">4-5 tuổi (Lớp Chồi)</option>
+                  <option value="5-6">5-6 tuổi (Lớp Lá)</option>
+                </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="subject">Tiêu đề *</label>
-              <input type="text" id="subject" name="subject" required />
+              <label for="child-name">Họ tên con</label>
+              <input type="text" id="child-name" name="child-name" />
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-type">Loại câu hỏi</label>
+              <select id="inquiry-type" name="inquiry-type">
+                <option value="">Chọn loại câu hỏi</option>
+                <option value="tuyen-sinh">Tuyển sinh</option>
+                <option value="chuong-trinh">Chương trình học</option>
+                <option value="hoc-phi">Học phí</option>
+                <option value="co-so-vat-chat">Cơ sở vật chất</option>
+                <option value="khac">Khác</option>
+              </select>
             </div>
 
             <div class="form-group">
@@ -95,114 +138,117 @@
                 name="message"
                 rows="6"
                 required
+                placeholder="Xin chào! Tôi muốn tìm hiểu về..."
               ></textarea>
             </div>
 
-            <div class="form-group">
-              <button type="submit" class="submit-btn">Gửi liên hệ</button>
-            </div>
+            <button type="submit" class="submit-btn">Gửi tin nhắn</button>
           </form>
         </section>
 
-        <section class="contact-section">
-          <h2>Các câu hỏi thường gặp</h2>
+        <!-- FAQ -->
+        <section class="content-section">
+          <h2>Câu hỏi thường gặp</h2>
           <div class="faq-list">
             <div class="faq-item">
-              <h3>Trường nhận học sinh từ bao nhiêu tuổi?</h3>
-              <p>
-                Trường nhận học sinh từ 3 tuổi trở lên. Chúng tôi cung cấp các
-                lớp Mầm (3-4 tuổi), Chồi (4-5 tuổi) và Hoa (5-6 tuổi).
-              </p>
+              <div class="faq-question">
+                <h4>Trường nhận trẻ từ độ tuổi nào?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Trường nhận trẻ từ 3 tuổi đến 6 tuổi, chia thành 3 lớp: Lớp
+                  Mầm (3-4 tuổi), Lớp Chồi (4-5 tuổi), và Lớp Lá (5-6 tuổi).
+                </p>
+              </div>
             </div>
+
             <div class="faq-item">
-              <h3>Giờ học và phí học tập như thế nào?</h3>
-              <p>
-                Giờ học từ 6:30 - 17:30 (Thứ Hai - Thứ Sáu) và 6:30 - 12:00 (Thứ
-                Bảy). Để biết chi tiết về phí học tập, vui lòng liên hệ trực
-                tiếp với nhà trường.
-              </p>
+              <div class="faq-question">
+                <h4>Học phí hàng tháng là bao nhiêu?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Học phí từ 800.000 - 1.200.000 VNĐ/tháng tùy theo lớp học. Đã
+                  bao gồm ăn uống, học liệu và các hoạt động ngoại khóa.
+                </p>
+              </div>
             </div>
+
             <div class="faq-item">
-              <h3>Trường có cung cấp bữa ăn không?</h3>
-              <p>
-                Có, trường cung cấp bữa ăn trưa được nấu theo chế độ dinh dưỡng
-                chuẩn. Thực phẩm được mua từ các nhà cung cấp uy tín, đảm bảo an
-                toàn vệ sinh thực phẩm.
-              </p>
+              <div class="faq-question">
+                <h4>Trường có dịch vụ đưa đón không?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Có, trường cung cấp dịch vụ đưa đón trong phạm vi 10km với mức
+                  phí hợp lý. Xe được trang bị đầy đủ thiết bị an toàn.
+                </p>
+              </div>
             </div>
+
             <div class="faq-item">
-              <h3>Quá trình tuyển sinh như thế nào?</h3>
-              <p>
-                Phụ huynh cần mang theo: giấy khai sinh, giấy tờ chứng minh nhân
-                dân, hộ khẩu của trẻ, sổ tiêm chủng và kết quả khám sức khỏe.
-                Sau đó liên hệ với trường để đăng ký.
-              </p>
+              <div class="faq-question">
+                <h4>Thời gian học của trẻ như thế nào?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Từ 7:00 - 17:00 các ngày trong tuần, thứ 7 từ 7:00 - 11:00.
+                  Trẻ có thể ở lại muộn trong trường hợp cần thiết.
+                </p>
+              </div>
             </div>
+
             <div class="faq-item">
-              <h3>Trường có hoạt động ngoài giờ học không?</h3>
-              <p>
-                Có, trường cung cấp các lớp ngoại khoá như: âm nhạc, vẽ vui,
-                tiếng Anh cơ bản. Chi tiết liên hệ với nhà trường.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>Làm thế nào để biết thông tin tuyến chi tiết về con em?</h3>
-              <p>
-                Trường cập nhật thông tin trẻ hàng tuần thông qua bảng thông
-                báo, email và cuộc gọi điện thoại. Phụ huynh cũng có thể yêu cầu
-                gặp giáo viên để trao đổi trực tiếp.
-              </p>
+              <div class="faq-question">
+                <h4>Thủ tục nhập học cần những gì?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Cần có giấy khai sinh, sổ tiêm chủng, giấy khám sức khỏe, 4
+                  ảnh 3x4 và đơn xin nhập học. Trường sẽ hướng dẫn chi tiết khi
+                  phụ huynh đến liên hệ.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="contact-section">
-          <h2>Quy trình đăng ký nhập học</h2>
-          <div class="process">
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <h3>Liên hệ và tham quan</h3>
+        <!-- Visit Schedule -->
+        <section class="content-section">
+          <h2>Đăng ký tham quan</h2>
+          <div class="visit-info">
+            <div class="visit-text">
+              <h4>Tham quan trường và tư vấn trực tiếp</h4>
               <p>
-                Liên hệ với nhà trường để xin tham quan cơ sở vật chất và tìm
-                hiểu về chương trình giáo dục.
+                Chúng tôi hoan nghênh phụ huynh và các em nhỏ đến tham quan
+                trường để hiểu rõ hơn về môi trường học tập và chương trình giáo
+                dục.
               </p>
+              <ul>
+                <li>Tham quan cơ sở vật chất và phòng học</li>
+                <li>Gặp gỡ và trao đổi với giáo viên</li>
+                <li>Tìm hiểu chương trình học cụ thể</li>
+                <li>Tư vấn thủ tục nhập học</li>
+              </ul>
             </div>
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <h3>Đăng ký</h3>
-              <p>
-                Điền form đăng ký với các thông tin cơ bản về trẻ em: họ tên,
-                ngày sinh, địa chỉ, v.v.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <h3>Chuẩn bị hồ sơ</h3>
-              <p>
-                Chuẩn bị các giấy tờ cần thiết: giấy khai sinh, hộ khẩu, sổ tiêm
-                chủng, kết quả khám sức khỏe.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">4</div>
-              <h3>Phỏng vấn</h3>
-              <p>
-                Phỏng vấn tìm hiểu tình hình sức khỏe, phát triển và nhu cầu học
-                tập của trẻ.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">5</div>
-              <h3>Ký hợp đồng</h3>
-              <p>
-                Ký hợp đồng giữa phụ huynh và nhà trường, thống nhất về phí học
-                tập và quy định chung.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">6</div>
-              <h3>Nhập học</h3>
-              <p>Trẻ bắt đầu học tập tại trường trong thời gian quy định.</p>
+            <div class="visit-schedule">
+              <h4>Lịch tham quan</h4>
+              <div class="schedule-item">
+                <strong>Thứ 2 - Thứ 6:</strong><br />
+                9:00 - 11:00 và 14:00 - 16:00
+              </div>
+              <div class="schedule-item">
+                <strong>Thứ 7:</strong><br />
+                8:00 - 11:00
+              </div>
+              <div class="schedule-note">
+                <p><em>Vui lòng liên hệ trước để đăng ký lịch tham quan</em></p>
+              </div>
             </div>
           </div>
         </section>
@@ -215,15 +261,21 @@
         <div class="footer-content">
           <div class="footer-section">
             <h4>Thông tin liên hệ</h4>
-            <p>Địa chỉ: Xã Quảng Phú, Tỉnh Đắk Lắk</p>
-            <p>Điện thoại: (0262) 123-4567</p>
-            <p>Email: tuoinoc@gmail.com</p>
+            <p>📍 Xã Quảng Phú, Huyện Cư M'gar, Tỉnh Đắk Lắk</p>
+            <p>📞 Điện thoại: (0262) 123-456</p>
+            <p>✉️ Email: truongmamnon@quangphu.edu.vn</p>
           </div>
           <div class="footer-section">
             <h4>Giờ hoạt động</h4>
-            <p>Thứ Hai - Thứ Sáu: 6:30 - 17:30</p>
-            <p>Thứ Bảy: 6:30 - 12:00</p>
+            <p>Thứ 2 - Thứ 6: 7:00 - 17:00</p>
+            <p>Thứ 7: 7:00 - 11:00</p>
             <p>Chủ Nhật: Nghỉ</p>
+          </div>
+          <div class="footer-section">
+            <h4>Liên kết nhanh</h4>
+            <p><a href="about.html">Giới thiệu</a></p>
+            <p><a href="programs.html">Chương trình</a></p>
+            <p><a href="contact.html">Liên hệ</a></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -232,17 +284,7 @@
       </div>
     </footer>
 
-    <script>
-      // Xử lý form liên hệ
-      document
-        .querySelector(".contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert(
-            "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm nhất."
-          );
-          this.reset();
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

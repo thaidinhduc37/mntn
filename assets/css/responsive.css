@@ -1,167 +1,363 @@
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .navbar {
+    gap: 15px;
+  }
+
+  .navbar a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .programs-grid,
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .teachers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== MOBILE (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Header responsive */
+  header {
+    padding: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-icon {
+    font-size: 28px;
+  }
+
+  .logo-text h1 {
+    font-size: 16px;
+  }
+
+  .logo-text p {
+    font-size: 11px;
+  }
+
+  /* Mobile menu */
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbar.show {
+    display: flex !important;
+  }
+
+  .navbar a {
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+  }
+
+  .navbar a:last-child {
+    border-bottom: none;
+  }
+
+  /* Banner responsive */
+  .banner {
+    padding: 40px 0;
+  }
+
+  .banner h2 {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  /* Content sections */
+  .content-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content-section h2 {
+    font-size: 20px;
+  }
+
+  /* Grids responsive */
+  .programs-grid,
+  .news-grid,
+  .teachers-grid,
+  .values-grid,
+  .methods-grid,
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Forms */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 8px;
+  }
+
+  .logo-text h1 {
+    font-size: 14px;
+  }
+
+  .logo-text p {
+    font-size: 10px;
+  }
+
+  .banner h2 {
+    font-size: 20px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .content-section {
+    padding: 15px;
+  }
+
+  .content-section h2 {
+    font-size: 18px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .program-card,
+  .news-item,
+  .teacher-card {
+    padding: 15px;
+  }
+
+  .stat-box {
+    padding: 15px;
+  }
+
+  .stat-box h3 {
+    font-size: 24px;
+  }
+}
+
 /* ==================== Smooth Animations ==================== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .content-section,
 .program-card,
 .teacher-card,
 .news-article {
-    animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 /* ==================== Print Styles ==================== */
 @media print {
-    header,
-    footer,
-    .navbar,
-    .contact-form,
-    .submit-btn {
-        display: none;
-    }
+  header,
+  footer,
+  .navbar,
+  .contact-form,
+  .submit-btn {
+    display: none;
+  }
 
-    body {
-        background-color: white;
-    }
+  body {
+    background-color: white;
+  }
 
-    .content-section,
-    main {
-        box-shadow: none;
-        margin-bottom: 20px;
-    }
+  .content-section,
+  main {
+    box-shadow: none;
+    margin-bottom: 20px;
+  }
 }
 
 /* ==================== Accessibility ==================== */
 :focus-visible {
-    outline: 2px solid #2a5298;
-    outline-offset: 2px;
+  outline: 2px solid #2a5298;
+  outline-offset: 2px;
 }
 
 /* ==================== Additional Utilities ==================== */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .mt-20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .mt-30 {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .mb-30 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .highlight {
-    background-color: #fff3cd;
-    padding: 2px 6px;
-    border-radius: 3px;
+  background-color: #fff3cd;
+  padding: 2px 6px;
+  border-radius: 3px;
 }
 
 /* ==================== Extra Responsive for Tablets ==================== */
 @media (max-width: 1024px) {
-    .container {
-        padding: 0 15px;
-    }
+  .container {
+    padding: 0 15px;
+  }
 
-    .navbar {
-        gap: 15px;
-    }
+  .navbar {
+    gap: 15px;
+  }
 
-    .programs-grid,
-    .news-grid,
-    .teachers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .programs-grid,
+  .news-grid,
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .intro-content,
-    .mission-vision,
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
+  .intro-content,
+  .mission-vision,
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==================== Loading States ==================== */
 @keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.7;
-    }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .loading {
-    animation: pulse 1.5s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
 /* ==================== Utility for Screen Readers ==================== */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* ==================== Dark Mode Support (Optional) ==================== */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
 
-    .content-section,
-    .contact-section {
-        background-color: #2a2a2a;
-        color: #e0e0e0;
-    }
+  .content-section,
+  .contact-section {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
 
-    .content-section h2,
-    .content-section h3 {
-        color: #64b5f6;
-    }
+  .content-section h2,
+  .content-section h3 {
+    color: #64b5f6;
+  }
 
-    .program-card,
-    .news-item,
-    .teacher-card {
-        background-color: #333;
-        color: #e0e0e0;
-    }
+  .program-card,
+  .news-item,
+  .teacher-card {
+    background-color: #333;
+    color: #e0e0e0;
+  }
 
-    .contact-item,
-    .method-card,
-    .value-item,
-    .faq-item {
-        background-color: #333;
-    }
+  .contact-item,
+  .method-card,
+  .value-item,
+  .faq-item {
+    background-color: #333;
+  }
 
-    .form-group input,
-    .form-group textarea {
-        background-color: #333;
-        color: #e0e0e0;
-        border-color: #444;
-    }
+  .form-group input,
+  .form-group textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #444;
+  }
 
-    .page-title {
-        background-color: #1a1a1a;
-        border-bottom-color: #444;
-    }
+  .page-title {
+    background-color: #1a1a1a;
+    border-bottom-color: #444;
+  }
 }
