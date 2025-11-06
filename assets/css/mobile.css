@@ -1,0 +1,415 @@
+/* ==================== Mobile First Improvements ====================*/
+
+/* Prevent zooming and ensure proper viewport */
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+/* Touch-friendly Elements */
+button,
+a,
+input,
+textarea,
+.navbar a,
+.submit-btn,
+.program-card,
+.teacher-card {
+  /* Minimum 44x44 for touch targets */
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Better tap highlighting */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  .submit-btn,
+  .navbar a {
+    /* Tap feedback */
+    -webkit-tap-highlight-color: rgba(42, 82, 152, 0.2);
+    tap-highlight-color: rgba(42, 82, 152, 0.2);
+  }
+
+  button:active,
+  .submit-btn:active {
+    opacity: 0.8;
+  }
+}
+
+/* Mobile-specific touch actions */
+html {
+  touch-action: manipulation;
+}
+
+/* Fix for mobile Safari */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  font-size: 16px; /* Prevent auto-zoom on focus */
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 4px;
+}
+
+/* Prevent double tap zoom */
+a,
+button {
+  touch-action: manipulation;
+}
+
+/* Fix keyboard height issues on mobile */
+input:focus,
+textarea:focus {
+  font-size: 16px;
+}
+
+/* ==================== Mobile Navigation ====================*/
+
+/* Hamburger menu for small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+/* ==================== Mobile Typography ====================*/
+
+@media (max-width: 600px) {
+  /* Better line height for reading on small screens */
+  body {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  h1 {
+    line-height: 1.2;
+  }
+
+  h2,
+  h3,
+  h4 {
+    line-height: 1.3;
+  }
+
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Prevent text overflow */
+  input,
+  textarea,
+  pre,
+  code {
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+}
+
+/* ==================== Mobile Forms ====================*/
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-family: inherit;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  button,
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+}
+
+/* ==================== Mobile Images ====================*/
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+picture {
+  display: contents;
+}
+
+/* ==================== Mobile Videos ====================*/
+
+iframe,
+video,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================== Mobile Tables ====================*/
+
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+    color: #666;
+  }
+
+  table td:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ==================== Mobile Spacing ====================*/
+
+@media (max-width: 768px) {
+  header,
+  footer,
+  main,
+  section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  /* Better spacing between sections */
+  .content-section,
+  .banner,
+  .page-title {
+    margin: 0 -12px;
+    padding: 15px 12px;
+  }
+}
+
+/* ==================== Mobile Scrolling ====================*/
+
+/* Smooth scrolling for better mobile experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix scrolling performance */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== Mobile Visibility Classes ====================*/
+
+.hide-mobile {
+  display: none !important;
+}
+
+.show-mobile {
+  display: block !important;
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+
+  .show-desktop {
+    display: block !important;
+  }
+
+  .hide-mobile {
+    display: block !important;
+  }
+
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* ==================== Mobile Transitions ====================*/
+
+/* Reduce animations on mobile for better performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Better performance on low-end devices */
+@media (max-width: 480px) {
+  * {
+    transition-duration: 0.15s !important;
+  }
+
+  .program-card,
+  .teacher-card,
+  .news-item {
+    transform: none !important;
+  }
+}
+
+/* ==================== Mobile Safe Areas ====================*/
+
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+
+  .back-to-top {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}
+
+/* ==================== Mobile Keyboard Fix ====================*/
+
+/* Fix for iOS keyboard covering content */
+@media (max-width: 768px) {
+  input:focus,
+  textarea:focus,
+  select:focus {
+    font-size: 16px;
+    background-color: #fafafa;
+  }
+
+  /* Ensure submit button is visible even with keyboard */
+  .submit-btn {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ==================== Print Mobile ====================*/
+
+@media print {
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .back-to-top,
+  .menu-toggle,
+  .navbar {
+    display: none !important;
+  }
+
+  .content-section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ==================== Mobile Debugging ====================*/
+
+/* Uncomment to see safe areas on mobile */
+/*
+@media (max-width: 768px) {
+    body {
+        outline: 1px solid red;
+    }
+
+    [class*="container"] {
+        outline: 1px solid blue;
+    }
+
+    input,
+    button,
+    a {
+        outline: 1px solid green;
+    }
+}
+*/

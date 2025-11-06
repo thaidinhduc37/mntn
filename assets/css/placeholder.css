@@ -1,0 +1,96 @@
+/* ===== PLACEHOLDER IMAGES CSS ===== */
+/* Tạm thời sử dụng cho demo, thay thế bằng hình ảnh thật */
+
+/* Placeholder cho các hình ảnh chưa có */
+.placeholder-image {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Hero placeholder */
+.hero-slide img {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  min-height: 600px;
+  object-fit: cover;
+}
+
+/* News placeholder */
+.news-image img {
+  background: linear-gradient(135deg, #059669, #10b981);
+  min-height: 200px;
+  object-fit: cover;
+}
+
+/* Gallery placeholder */
+.gallery-item img {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  min-height: 250px;
+  object-fit: cover;
+}
+
+/* About image placeholder */
+.about-image img {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  min-height: 400px;
+  object-fit: cover;
+}
+
+/* Fallback khi hình ảnh không load được */
+img[src=""],
+img:not([src]) {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+img[src=""]::before,
+img:not([src])::before {
+  content: "Hình ảnh đang tải...";
+}
+
+/* Responsive placeholder text */
+@media (max-width: 768px) {
+  .placeholder-image {
+    font-size: 12px;
+  }
+
+  img[src=""]::before,
+  img:not([src])::before {
+    content: "Đang tải...";
+  }
+}
